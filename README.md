@@ -18,9 +18,7 @@
 ```javascript
 tstHstRoll.fixedinput(10);//输入框会往上顶到距离顶部10px
 ```
-
-![android-input.png](https://github.com/weixisheng/input-problem/blob/master/img/android-input.png)
-
+<img src="https://github.com/weixisheng/input-problem/blob/master/img/android-input.png" width="300px">
 <img src="https://github.com/weixisheng/input-problem/blob/master/img/ios-input.png" width="300px">
 
 作为安卓软键盘收回事件的模拟方案
