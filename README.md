@@ -19,11 +19,7 @@
 tstHstRoll.fixedinput(10);
 ```
 
-![安卓](
-
-https://github.com/weixisheng/input-problem/tree/master/img/android-input.png
-
-)
+![安卓](https://github.com/weixisheng/input-problem/tree/master/img/android-input.jpg)
 
 作为软键盘收回事件的模拟方案
 
