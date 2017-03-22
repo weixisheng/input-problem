@@ -21,7 +21,7 @@ tstHstRoll.fixedinput(10);
 
 ![安卓](
 
-https://github.com/weixisheng/input-problem/tree/master/img/android-input.png
+https://github.com/weixisheng/input-problem/tree/master/img/android-input.jpg
 
 )
 
