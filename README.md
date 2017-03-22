@@ -21,7 +21,7 @@ tstHstRoll.fixedinput(10);//输入框会往上顶到距离顶部10px
 
 
 
-![android-input.png](https://github.com/weixisheng/input-problem/blob/master/img/android-input.png =270*580)
+![android-input.png](https://github.com/weixisheng/input-problem/blob/master/img/android-input.png)
 
 
 
