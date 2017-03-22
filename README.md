@@ -16,12 +16,16 @@
 如果底部有fixed定位，加载jroll-fixedinput.js。例：
 
 ```javascript
-tstHstRoll.fixedinput(10);
+tstHstRoll.fixedinput(10);//输入框会往上顶到距离顶部10px
 ```
 
-![android-input.png](https://github.com/weixisheng/input-problem/tree/master/img/android-input.png)
 
-作为软键盘收回事件的模拟方案
+
+![android-input.png](https://github.com/weixisheng/input-problem/blob/master/img/android-input.png)
+
+
+
+作为安卓软键盘收回事件的模拟方案
 
 ```javascript
 (function() {
@@ -35,3 +39,4 @@ tstHstRoll.fixedinput(10);
   });
 }());
 ```
+
