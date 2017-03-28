@@ -56,7 +56,9 @@ var tabs = $(".tonic-tabs>.tab-item"),
     underline = $(".underline");
 tabs.each(function(index) {
         $(this).data("index", index).click(function() {
-            var target = panels.eq($(this).data("index"));                    $(this).addClass("active").siblings("div").removeClass("active");         target.removeClass("hidden").siblings("div").addClass("hidden");
+            var target = panels.eq($(this).data("index"));
+	    $(this).addClass("active").siblings("div").removeClass("active");
+	    target.removeClass("hidden").siblings("div").addClass("hidden");
           var l = this.offsetLeft;
           underline.css({
             "-webkit-transform": "translateX(" + l + "px)",
