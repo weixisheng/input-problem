@@ -16,7 +16,8 @@
 如果底部有fixed定位，加载jroll-fixedinput.js。例：
 
 ```javascript
-tstHstRoll.fixedinput(10);//输入框会往上顶到距离顶部10px
+tstHstRoll.fixedinput(10);//上移到离wrapper底部10px处
+tstHstRoll.fixedinput(10,true);//scroller里面的input/textarea的tabIndex设置为-1，解决tab键切换错位bug
 ```
 <img src="https://github.com/weixisheng/input-problem/blob/master/img/android-input.png" width="300px"><img src="https://github.com/weixisheng/input-problem/blob/master/img/ios-input.png" width="300px">
 
