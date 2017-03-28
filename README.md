@@ -35,3 +35,34 @@ tstHstRoll.fixedinput(10,true);//scroller里面的input/textarea的tabIndex设�
   });
 }());
 ```
+
+> 快速tab
+
+```html
+<div class="tonic-tabs">
+  <div class="tab-item active">暖湿环境方案</div>
+  <div class="tab-item">干冷环境方案</div>
+  <div class="underline"></div>
+</div>
+<div class="tab-content">
+  <div class="warm"></div>
+  <div class="dry hidden"></div>
+</div>
+```
+
+```javascript
+var tabs = $(".tonic-tabs>.tab-item"),
+    panels = $(".tab-content>div"),
+    underline = $(".underline");
+tabs.each(function(index) {
+        $(this).data("index", index).click(function() {
+            var target = panels.eq($(this).data("index"));                    $(this).addClass("active").siblings("div").removeClass("active");         target.removeClass("hidden").siblings("div").addClass("hidden");
+          var l = this.offsetLeft;
+          underline.css({
+            "-webkit-transform": "translateX(" + l + "px)",
+            "transform": "translateX(" + l + "px)"
+          });
+        });
+});
+```
+
