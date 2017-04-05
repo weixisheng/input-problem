@@ -189,6 +189,33 @@ tabs.each(function(index) {
           });
         });
 });
+
+var tabCon = document.querySelector(".tab-content"),
+    tabItems = document.querySelectorAll(".tab-item");
+var startX, moveX, differ;
+tabCon.addEventListener('touchstart', function(e) {
+  var touch = e.touches[0];
+  startX = touch.pageX;
+}, false);
+tabCon.addEventListener('touchmove', function(e) {
+  var touch = e.touches[0];
+  moveX = touch.pageX;
+  differ = moveX - startX;
+}, false);
+tabCon.addEventListener('touchend', function(e) {
+  //left-->right
+  if (differ > 0 && differ > 50) {
+    if (tabItems[1].classList.contains('active')) {
+      tabItems[0].click();
+    }
+  }
+  //right-->left
+  else if (differ < 0 && differ < -50) {
+    if (tabItems[0].classList.contains('active')) {
+      tabItems[1].click();
+    }
+  }
+}, false);
 ```
 
 > 浏览器打开app问题(**微信浏览器不行**)
