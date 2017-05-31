@@ -249,3 +249,17 @@ else {
 }
 ```
 
+> 判断是否空对象
+
+```javascript
+function isEmptyObject(o){
+  for(var i in o){
+    /*或
+    	if(o.hasOwnProperty(i))
+    */ 
+  	return !1;
+  }
+  return !0;
+}
+```
+
