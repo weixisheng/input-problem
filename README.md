@@ -163,13 +163,13 @@ tstHstRoll.fixedinput(10,true);//scroller里面的input/textarea的tabIndex设�
 
 ```html
 <div class="tonic-tabs">
-  <div class="tab-item active">暖湿环境方案</div>
-  <div class="tab-item">干冷环境方案</div>
+  <div class="tab-item active">tab1</div>
+  <div class="tab-item">tab2</div>
   <div class="underline"></div>
 </div>
 <div class="tab-content">
-  <div class="warm"></div>
-  <div class="dry hidden"></div>
+  <div class="tc-1"></div>
+  <div class="tc-2 hidden"></div>
 </div>
 ```
 
@@ -232,18 +232,18 @@ if (/micromessenger/i.test(u)) {
 // app
 else {
   if (isAndroid) {
-    window.location.href = "infinitusbupm://"; /***打开app的协议，由安卓同事提供***/
+    window.location.href = "xxx://"; /***打开app的协议，由安卓同事提供***/
     setTimeout(function() {
-      window.location.href = "http://app.qq.com/#id=detail&appid=1105290112"; /***下载安卓app的地址***/
+      window.location.href = "http://app.qq.com/#id=detail&appid=xxx"; /***下载安卓app的地址***/
     }, 1000);
   } else {
     var ifr = document.createElement("iframe");
-    ifr.src = "infinitusbupm://"; /***打开app的协议，由ios同事提供***/
+    ifr.src = "xxx://"; /***打开app的协议，由ios同事提供***/
     ifr.style.display = "none";
     document.body.appendChild(ifr);
     setTimeout(function() {
       document.body.removeChild(ifr);
-      window.location.href = "itms-apps://itunes.apple.com/tc/app/wu-xian-ji-zhong-guo/id1100583637?mt=8";
+      window.location.href = "itms-apps://itunes.apple.com/tc/app/xxx?mt=8";
     }, 1000);
   }
 }
