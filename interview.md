@@ -141,7 +141,7 @@ setImmediate(function() {
 })
 ```
 
-#### 每隔1s输出0,1,2,3,4,5####
+#### 每隔1s输出0,1,2,3,4,5
 
 ```javascript
 //闭包
@@ -186,6 +186,15 @@ async function output(n) {
     return i;
 }
 output(5).then(console.log);
+```
+
+#### Vue的computed工作流程
+
+```html
+1、data属性初始化，使用Object.defineProperty转化为getter和setter
+2、computed属性初始化，每个属性提供的函数作为属性的 getter
+3、Object.defineProperty getter 依赖收集，用于依赖发生变化时，触发属性重新计算
+4、computed 计算属性嵌套其他 computed 计算属性时，先进行其他的依赖收集
 ```
 
 
