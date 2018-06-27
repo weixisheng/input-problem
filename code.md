@@ -79,4 +79,41 @@
   pick({a:1,b:2,c:3},['a','b']) //{a:1,b:2}        
   ```
 
+- 复制到剪贴板
+
+  ```javascript
+  const copyToClipboard = str => {
+    //创建一个新的 <textarea> 元素，用提供的数据填充它，并将其添加到 HTML 文档中
+      const el = document.createElement('textarea');
+      el.value = str;
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+    //存储选择的范围
+      const selected =
+          document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+      el.select();
+      document.execCommand('copy');//复制到剪贴板
+      document.body.removeChild(el);
+      if (selected) {
+          document.getSelection().removeAllRanges();
+          document.getSelection().addRange(selected);//恢复原始选择范围
+      }
+  };
+
+  copyToClipboard('test text')
+  ```
+
+- 生成UUID
+
+  ```javascript
+  const UUIDGeneratorBrowser = () =>
+    ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+      (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
+    );
+
+  UUIDGeneratorBrowser(); //"36d8c9ab-0e84-45b7-846f-fa5ee06a47e0"
+  ```
+
   ​
