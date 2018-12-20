@@ -62,3 +62,13 @@ $     匹配字符串的结束
  //懒惰匹配
  'aabab'.match(/a.*?b/g) //==> ["aab", "ab"].最先开始的匹配拥有最高的优先权，因此第一个是aab而不是ab
  ```
+
+### 应用实例
+- 获取地址栏参数
+```javascript
+function getParam(url) {
+	return s.match(/([^?&=]+)(=[^=&]+)/g).reduce((acc,val)=>(acc[val.split('=')[0]] = val.split('=')[1],acc),{})
+}
+let s = 'http://www.test.com/setting?type=add&id=3&code=addrole'
+// getParam(s) => {code: "addrole",id: "3",type: "add"}
+```
